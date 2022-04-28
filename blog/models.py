@@ -5,6 +5,7 @@ from django.db.models import Model
 from django.contrib.auth.models import User
 
 
+
 class Post(Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
@@ -17,5 +18,8 @@ class Post(Model):
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk': self.pk})
+
+
+
 
 
